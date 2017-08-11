@@ -1,0 +1,65 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>切换效果</title>
+<meta name="" content="" charset="utf-8">
+<style>
+	.abc li{
+		float: left;
+		list-style: none;
+		margin-left: 10px;
+	}
+	#content{
+		clear: both;	/* 清除浮动*/
+	}
+	.cang{
+		display: none;
+	}
+</style>
+</head>
+<body>
+<div id="news">
+	<div id="head">
+		<ul class="abc">
+			<li onmouseover="show(0)">要闻</li>
+			<li onmouseover="show(1)">株洲新闻</li>
+			<li onmouseover="show(2)">军事|航空</li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="cang" style="display: block">
+			<ul >
+				<li>十八大以来</li>
+				<li>以辛金平为核心</li>
+			</ul>
+		</div>
+		<div class="cang">
+			<ul >
+				<li>株洲攸县</li>
+				<li>株洲天元区</li>
+			</ul>
+		</div>
+		<div class="cang">
+			<ul>
+				<li>中印对峙</li>
+				<li>士兵突击</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	function show(a)
+	{
+		var x = document.querySelectorAll('.cang');
+		for(var i=0;i<x.length;i++)
+		{
+			if(i==a)
+			x[i].style.display='block'
+			else
+			x[i].style.display='none'
+		}
+		
+	}
+</script>
+</body>
+</html>

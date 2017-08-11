@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>购物计算器</title>
+  </head>
+  <body>
+    <table text-align="center">
+      <tr>
+        <td><img src="shop.gif" alt="图片未加载，请稍后再试"></td>
+        <td colspan="3"><h1 >购物计算器</h1></td>
+      </tr>
+      <tr>
+        <td>第一个数</td>
+        <td colspan="3"><input type="text" name="" value="" id="num1"></td>
+      </tr>
+      <tr>
+        <td>第二个数</td>
+        <td colspan="3"><input  type="text" name="" value="" id="num2"></td>
+      </tr>
+      <tr>
+        <td ><input type="button" name="" value="+" onclick="add()"></td>
+        <td><input type="button" name="" value="-" onclick="subtract()"></td>
+        <td><input type="button" name="" value="×" onclick="multiply()"></td>
+        <td><input type="button" name="" value="÷" onclick="div()"></td>
+      </tr>
+      <tr>
+        <td>结果</td>
+        <td colspan="3"><input type="text" name="" value="" id="result"></td>
+      </tr>
+    </table>
+  </body>
+  <script type="text/javascript">
+    function add() {
+      var a = document.getElementById("num1");
+      var b = document.getElementById("num2");
+
+      /*
+      var z = a.value * 1 + b.value * 1;              // 乘以1是因为值是字符串类型，需要将字符串转换为整数进行计算
+      window.alert(z);
+      document.getElementById("result").value = z;
+      */
+      /*
+      var z = parseFloat(a.value) + parseFloat(b.value);
+      document.getElementById("result").value = z;
+      //这种方法适用于输入前面为数字后面为字母的，可以转换过来,例如 a 是 11a ，将会转换为11
+
+      */
+
+      if(isNaN(a.value) || isNaN(b.value)){                 //isNaN是
+        window.alert("输入有误，请重新输入");
+      }else{
+        var z = a.value * 1 + b.value * 1;
+        document.getElementById("result").value = z;
+      }
+    }
+
+    function subtract() {
+      var a = document.getElementById("num1");
+      var b = document.getElementById("num2");
+
+      var c = isNaN(a.value);
+      var d = isNaN(b.value);
+      if(c || d){
+          if(c){
+            a.select();
+          }else{
+            b.select();
+          }
+          window.alert("输入有误，请重新输入");
+          return;
+      }else{
+          var z = a.value * 1 - b.value * 1;
+          document.getElementById("result").value = z;
+      }
+
+    }
+
+    function multiply() {
+      var a = document.getElementById("num1");
+      var b = document.getElementById("num2");
+
+      var c = isNaN(a.value);
+      var d = isNaN(b.value);
+
+      if(c || d){
+        if(c){
+          a.select();
+        }else{
+          b.select();
+        }
+        window.alert("输入有误，请重新输入");
+        return;
+      }else{
+        var z = (a.value) * (b.value);                //乘除会进行自动类型转换
+        document.getElementById("result").value = z;
+      }
+    }
+
+    function div(){
+      var a = document.getElementById("num1");
+      var b = document.getElementById("num2");
+
+      var c = isNaN(a.value);
+      var d = isNaN(b.value);
+
+      if(c || d){
+        if(c){
+          a.select();
+        }else{
+          b.select();
+        }
+        window.alert("输入有误，请重新输入");
+      }else{
+
+        //首先将除数关于0个各种形式（0，0.0，-0.0等）转换为整数，判断是否为0，如果不是，再用转换之前的数进行计算。
+        var e = parseInt(b.value);
+        if(e === 0){
+          window.alert("输入有误，请重新输入");
+          return;
+        }
+
+        var z = a.value / b.value;
+        window.alert(z);
+        document.getElementById("result").value = z;
+
+      }
+    }
+
+  </script>
+</html>

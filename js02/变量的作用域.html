@@ -1,0 +1,27 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>变量的作用域</title>
+<meta charset="utf-8">
+</head>
+<body>
+<input  type="button" value='test1' onclick="test1()"/>
+<input  type="button" value='test2' onclick="test2()"/>
+</body>
+<script>
+	// 局部变量：d定义在函数内部的变量，称为局部变量
+	// 全局变量：定义在函数外部的变量，称为全局变量
+	// 全局变量：不用var声明，直接赋值的变量
+	function test1()
+	{
+		var x=999;
+		alert(x++);	
+	}
+	function test2()
+	{			
+		alert(x)		
+	}
+	
+	
+</script>
+</html>

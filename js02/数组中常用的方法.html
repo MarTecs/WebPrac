@@ -1,0 +1,26 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>数组中常用的方法</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+	var x=[34,56,3,9,67,89];
+	// pop();
+	//alert(x.length)
+	//var y = x.pop();	// pop()删除最后一个元素
+	//x.push('world')		// push()在数组的末尾添加元素
+	//alert(x.toString());	// toString(),将数组转化为字符串
+	// sort(),数组排序方法,是按照ASCII码排序，汉字有可能是按照UNICODE编码
+	// 如果需要按照数值大小排序，需要定义一个排序的方法
+	x.sort(mysort)		// 按照指定的排序规则排序
+	// 回调函数，表示将函数作为函数的参数
+	alert(x.toString())
+	function mysort(x,y)
+	{
+		return x-y;
+	}
+</script>
+</body>
+</html>

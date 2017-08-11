@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>open方法打开页面</title>
+</head>3
+<body>
+  <input type="text" id="ke" />
+  <button onclick="openAhtml()">打开一个新窗口</button>
+</body>
+<script>
+    function openAhtml()
+    {
+      var mywindow = window.open('2.html');
+      var x = document.getElementById('ke').value;
+  
+      mywindow.document.getElementById('mine').value = x;
+    }
+
+</script>
+</html>

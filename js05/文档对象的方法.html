@@ -1,0 +1,30 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>文档对象的方法</title>
+<meta name="" content="" charset="utf-8">
+</head>
+<body>
+<input  type="text" id="uname" value="春天"/><br />
+<input  type="button" name="season" value="夏天"/><br />
+<input  type="button" name="season" value="秋天"/><br />
+<input  type="button" name="season" value="冬天"/><br />
+
+<script>
+	//document.getElementById('uname').value='spring'
+	//var x = document.getElementsByName('season');
+	//alert(x.length)
+	var x = document.getElementsByTagName('input')
+	//alert(x.length)
+	for(var i=0;i<x.length;i++)
+		alert(x[i].value)
+		
+		
+	// 注意浏览器的兼容问题：
+	// getElementsByName()方法在低版本的浏览器中只能找到如下标签：
+	// img,a,input,form,select,textarea,iframe标签可以设置name属性。
+		
+</script>
+
+</body>
+</html>

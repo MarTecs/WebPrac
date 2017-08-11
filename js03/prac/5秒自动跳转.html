@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>5秒后自动跳转</title>
+</head>
+<body onload="jump()">
+  <h1><span id="time">5</span>秒后自动跳转</h1>
+</body>
+<script type="text/javascript">
+  var ti = 5;
+  var in = window.setInterval("jump()", 1000);
+  function jump(){
+    ti--;
+    if(document.getElementById("time").innerHTML == 0)
+    {
+      window.location.href="http://www.baidu.com";
+      window.clearInterval(in);
+    }
+    document.getElementById("time").innerHTML= ti ;
+  }
+
+</script>
+</html>

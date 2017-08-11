@@ -1,0 +1,21 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>定时器方法</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+	// window.setInterval('函数',毫秒数),表示每隔毫秒之后调用函数一次
+	// window.setTimeout('函数',毫秒数),表示毫秒之后调用函数一次
+	// window.clearInterval()
+	// window.clearTimeout()
+	function go()
+	{
+		window.open('http://www.jd.com');			//window.setTimeout('go()',1000)
+	}
+	x=window.setInterval('go()',100);
+	t=window.setTimeout('go()',100)
+</script>
+</body>
+</html>

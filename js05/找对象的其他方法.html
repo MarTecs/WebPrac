@@ -1,0 +1,27 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>找对象的其他方法</title>
+<meta name="" content="" charset="utf-8">
+</head>
+<body>
+	<div class="abc" id="box1">aaaa</div>
+	<div class="abc" id="box1">bbbb</div>
+	<div class="abc">cccc</div>
+	<div class="abc">dddd</div>
+	<div class="abc">eeee</div>
+</body>
+<script>
+	// 根据class属性找对象
+	//var x= document.getElementsByClassName('abc');	// getElementsByClassName(),IE9+
+	var x = document.querySelectorAll('#box1')	// IE8+,根据class属性找对象，必须添加".类名称"
+	
+	// document.querySelectorAll('#id'),根据ID找对象，返回的都是集合
+	// document.querySelectorAll('.class'),根据class属性找对象
+	// document.querySelectorAll('tagname'),根据标签名找对象
+	
+	alert(x.length)
+	
+	
+</script>
+</html>

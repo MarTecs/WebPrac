@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>抽奖展示</title>
+</head>
+<body>
+  <center><img src="0.png" id="ima"  /></center>
+  <hr />
+  <center>
+    <input type="button" id="btn1" onclick=t=setInterval('change()',100) value="开始" />
+    <input type="button" id="btn2" onclick="stop()" value="停止" />
+  </center>
+</body>
+<script type="text/javascript">
+  var background = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"];
+  function change()
+  {
+    document.getElementById("ima").src = background[Math.ceil(Math.random * 8)];
+    document.getElementById("btn1").disabled = true;
+  }
+
+  function stop()
+  {
+    window.clearInterval(t);
+    document.getElementById("btn1").disabled = false;
+  }
+</script>
+</html>

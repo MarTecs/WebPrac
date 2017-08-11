@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组自定义排序</title>
+</head>
+<body>
+  <h1>现在时间是：<span id="time"></span></h1>
+</body>
+<script>
+// 1. 数组自定义排序
+// 2. 显示当前时间到网页
+// 3. 面试题：定义一个函数，删除数组中重复元素
+// 4. 面试题：定义一个函数，统计数组中元素值的个数
+//[3,4,3,5,6,2,3,5,6,7]
+
+
+  //数组自定义排序
+  var arrays = ['3',4,3,5,6,2,3,5,6,7];
+  arrays.sort(dele);
+
+  function dele(a, b){
+    return b - a;
+  }
+
+  for (var i = 0; i < arrays.length; i++) {
+
+    document.write(arrays[i] + "&nbsp;");
+  }
+
+  //显示当前时间到网页中，设置为动态的
+  function go(){
+    var now = new Date();
+    document.getElementById("time").innerHTML = now.toLocaleString();
+  }
+  window.setInterval('go()', 1000);
+  go();
+
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var date = now.getDate();
+  var day = now.getDay();
+
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  
+
+</script>
+</html>

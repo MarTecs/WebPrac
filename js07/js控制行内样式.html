@@ -1,0 +1,43 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>js控制行内样式</title>
+<meta charset="utf-8">
+<style>
+	p{
+		color:red;
+		font-size: 32px;
+	}
+</style>
+</head>
+<body>
+<p id="duan">hello world</p>
+<p id="duan">hello world</p>
+<p id="duan">hello world</p>
+<input  type="button" value="变色龙" onclick="bian()"/>
+<a>小</a>
+<a>中</a>
+<a href="javascript:big()">大</a>
+<script>
+	function bian()
+	{
+		var x = document.getElementById('duan');
+		// 对象.style.css属性 表示行内样式
+		x.style.fontSize='90px';
+		if(x.style.color=='red')
+			x.style.color='green';
+		else
+			x.style.color='red'
+	}
+	function big()
+	{
+		var x  = document.getElementsByTagName('p');
+		alert(x.length)
+		for(var i=0;i<x.length;i++)
+			x[i].style.fontSize='70px'
+	}
+</script>
+
+
+</body>
+</html>

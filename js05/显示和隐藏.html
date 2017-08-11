@@ -1,0 +1,35 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>显示和隐藏</title>
+<meta name="" content="" charset="utf-8">
+</head>
+<body>
+<img src="1.png" id='tu1'>
+<input type="button" id="btn1" value="隐藏" onclick="cang()"/>
+<img src="a.png" id="tu2"><input type="button" id="btn2" value="隐藏2" onclick="cang2()"/>
+</body>
+<script>
+function cang2()
+{
+	var x = document.getElementById('tu2');
+	if(x.style.display=='none')
+		x.style.display='block';
+		else
+		x.style.display='none'
+		document.getElementById('btn2').value=document.getElementById('btn2').value=='隐藏'?'显示' :'隐藏';
+}
+	function cang()
+	{
+		var x= document.getElementById('tu1');
+		if(x.style.visibility=='hidden')
+		x.style.visibility='visible';
+		else
+		x.style.visibility='hidden'
+		document.getElementById('btn1').value=document.getElementById('btn1').value=='隐藏'?'显示' :'隐藏';
+	}
+	
+	
+	
+</script>
+</html>

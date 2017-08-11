@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全选与反选</title>
+</head>
+<body>
+  <input type="checkbox" id="quanxuan" onclick="quanxuan()">全选
+  <input type="checkbox" name="" onclick="fanxuan()">反选
+  <br />
+  <input type="checkbox" name="name" value="">薛之谦
+  <input type="checkbox" name="name" >张杰
+  <input type="checkbox" name="name">陈奕迅
+  <input type="checkbox" name="name">周杰伦
+  <input type="checkbox" name="name">王力宏
+  <input type="checkbox" name="name">朗朗
+  <input type="checkbox" name="name">张碧晨
+</body>
+
+<script type="text/javascript">
+  function quanxuan(){
+    var x = document.getElementById("quanxuan");
+    var box = document.getElementsByName("name");
+    for(var i = 0; i < box.length; i++)
+    {
+      box[i].checked = x.checked;
+    }
+  }
+
+
+  function fanxuan()
+  {
+    var box = document.getElementsByName("name");
+    for(var i = 0; i < box.length; i++)
+    {
+      box[i].checked = !box[i].checked;
+    }
+  }
+
+
+</script>
+</html>

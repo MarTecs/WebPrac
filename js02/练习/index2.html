@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 3. 面试题：定义一个函数，删除数组中重复元素
+// 4. 面试题：定义一个函数，统计数组中元素值的个数
+//[3,4,3,5,6,2,3,5,6,7]
+  var arrays = new Array();
+
+  function delSame()
+  {
+    var array = [3,4,3,5,6,2,3,5,6,7];
+    array.sort();
+    document.write(array.toString() + "<br />");
+
+    var index = 0;
+    for(var i = 0; i <  array.length; )
+    {
+      var count = 1;
+      for(var j = i + 1; j < array.length; j++)
+      {
+        if(array[i] == array[j])
+        {
+          count++;
+        }
+      }
+
+      if(count != 1)
+      {
+        document.write(array[i] + "重复了" + count + "次" + "<br />");
+        arrays[index] = array[i];
+        i = i + count;
+      }else{
+        document.write(array[i] + "没有重复" + "<br />");
+        arrays[index] = array[i];
+        i++;
+
+      }
+      index++;
+    }
+  }
+  delSame();
+  document.write("<br />" + arrays.toString());
+</script>
+</html>

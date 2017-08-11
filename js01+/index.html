@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>这是一个测试网页</title>
+    <style media="screen">
+      /*css代码*/
+    </style>
+  </head>
+  <body>
+
+
+  </body>
+  <script type="text/javascript">
+    //js代码
+      /*输出所采用的三种方式：*/
+      window.alert("Hello World");
+      document.write("hello World");
+      console.log("Hello World");
+
+    /*基本数据类型,弱类型变量的数据类型是在运行时才确定，并且可以改变，强类型变量数据类型在声明的时候已经确定，一般不
+  可以改变*/
+
+    var i = 0;
+    window.alert(typeof(i));
+    i = new Date();
+    window.alert(i);      //打印当前时间
+
+    var x;
+    window.alert(typeof(x));      //返回undefined
+
+    x = null;
+    window.alert(typeof(x));      //返回Object
+
+
+    var x = 10, y = 7;
+    window.alert(x/y);          //相除会包含小数，会当成10.0/7.0
+
+    var a = 10, y = 0;          //相除结果为infinity
+    var a = 10, y = -0;         //相除结果为-infinity
+
+    var a = 7, b = 3.2;
+    window.alert(a%b);
+
+    window.alert(7/-3)
+    7/3的余数  ,余数符号与被除数一致
+    7/-3
+    -7/3
+    -7/-3
+
+    window.alert(7 + "3");      //73
+    window.alert(7 * '3');      //21
+    window.alert(7 * "3a");     //NaN表示not a number，表示非数字
+
+    window.alert(7 == '7');     //true，
+    window.alert(7 === '7');    //false,
+
+
+    // || 与 && 与之前不同
+
+    var x = 4, y = 2;
+    var z = x || y;             //输出
+    var a = 6, b = 1;
+    window.alert(x && y);       或的话找到最前面如果为真就输出
+
+    window.alert(z);
+  </script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>浏览器对象模型</title>
+<meta charset="utf-8">
+</head>
+<body>
+浏览器对象模型主要就是学习一个对象，window，就表示一个浏览器窗体。
+window对象是js中的默认对象,如果是window对象的方法，可以省略window.
+js中的全局变量，其实是window对象的属性.
+js中定义的函数，其实就是window对象的方法。
+<script>
+	function show()
+	{
+		var x=100;
+		alert(x);
+		show2();
+		function show2()
+		{
+			alert(333)
+		}
+	}
+	var aa='sunjob';
+	window.show();
+	
+</script>
+</body>
+</html>

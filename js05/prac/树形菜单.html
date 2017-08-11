@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>树形菜单</title>
+  <style media="screen">
+    #main {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .name {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="body">
+    <a href="javascript:show(-1)">展开全部</a>
+    <ul id="main">
+      <li><a href="javascript:show(0)">手机</a></li>
+      <div class="name">
+        <ul>
+          <li>魅族</li>
+          <li>华为</li>
+          <li>Apple</li>
+          <li>联想</li>
+          <li>摩托罗拉</li>
+        </ul>
+      </div>
+      <li><a href="javascript:show(1)">电脑</a></li>
+      <div class="name">
+        <ul>
+          <li>Dell</li>
+          <li>Msi</li>
+          <li>Lenovo</li>
+          <li>Hp</li>
+          <li>mi</li>
+          <li>AlienWare</li>
+        </ul>
+      </div>
+      <li><a href="javascript:show(2)">数码</a></li>
+      <div class="name">
+        <ul>
+          <li>相机</li>
+          <li>显示器</li>
+          <li>音响</li>
+          <li>显卡</li>
+          <li>电源</li>
+        </ul>
+      </div>
+      <li><a href="javascript:show(3)">图书</a></li>
+      <div class="name">
+        <ul>
+          <li>科技</li>
+          <li>漫画</li>
+          <li>小说</li>
+          <li>杂志</li>
+          <li>物理</li>
+        </ul>
+      </div>
+      <li><a href="javascript:show(4)">儿童</a></li>
+      <div class="name">
+        <ul>
+          <li>奶粉</li>
+          <li>衣服</li>
+          <li>安全座椅</li>
+          <li>其他</li>
+        </ul>
+      </div>
+      <li><a href="javascript:show(5)">衣物</a></li>
+      <div class="name">
+        <ul>
+          <li>Anta</li>
+          <li>Li-ning</li>
+          <li>Nike</li>
+          <li>Adidas</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</body>
+<script type="text/javascript">
+    function show(id)
+    {
+      //返回一个String
+      // window.alert(typeof document.getElementsByClassName("name")[id].style.display);
+      var box =  document.querySelectorAll(".name");
+      // var x = document.querySelectorAll('.aa');
+  		// window.alert(box[id].style.display);
+
+
+
+
+      // for(var i = 0; i < box.length; i++)
+      // {
+      //   if(i === id)
+      //     continue;
+      //
+      //   box[i].style.display = 'none';
+      //
+      // }
+
+      if(box[id].style.display === 'block')
+      {
+
+        box[id].style.display = 'none';
+      }else{
+        
+        box[id].style.display = 'block';
+      }
+
+
+
+    }
+</script>
+</html>

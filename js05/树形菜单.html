@@ -1,0 +1,51 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>树形菜单</title>
+<meta name="" content="" charset="utf-8">
+<style>
+	.aa{
+		display: none;
+	}
+	li{
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+热门电影：
+<ul>
+	<li><a href='javascript:show(0)'>国产片</a></li>
+		<ul class="aa">
+			<li><a>战狼2</a></li>
+			<li><a>战狼1</a></li>
+			<li><a>让子弹飞</a></li>
+			<li><a>疯狂的石头</a></li>
+		</ul>
+	<li><a href='javascript:show(1)'>欧美片</a></li>
+		<ul class="aa">
+			<li><a>星球大战1</a></li>
+			<li><a>星球大战2</a></li>
+			<li><a>星球大战3</a></li>
+			<li><a>星球大战4</a></li>
+		</ul>
+	<li><a href='#'>日韩片</a></li>
+	<li><a href='javascript:show(2)'>港台片</a></li>
+	<ul class="aa">
+			<li><a>寒战1</a></li>
+			<li><a>寒战2</a></li>
+			<li><a>寒战3</a></li>
+			<li><a>寒战4</a></li>
+
+		</ul>
+</ul>
+<script>
+	function show(a)
+	{
+		var x = document.querySelectorAll('.aa');
+		x[a].style.display='block'
+		window.alert(x[a].style.display);
+	}
+</script>
+</body>
+</html>

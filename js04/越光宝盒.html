@@ -1,0 +1,21 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>越光宝盒</title>
+<meta charset="utf-8">
+</head>
+
+
+<body>
+<input  type="text" id="name2"/>
+<input  type="button" value="回到过去" onclick='goback()'/>
+</body>
+<script>
+function goback()
+{
+window.opener.document.getElementById('name').value=document.getElementById('name2').value;
+//window.opener:页面的打开者
+}
+	
+</script>
+</html>

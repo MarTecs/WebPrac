@@ -1,0 +1,28 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>js控制外部样式</title>
+<meta charset="utf-8">
+<link  rel="stylesheet" href="css.css" id="mylink"/>
+</head>
+<body>
+<p>
+	人要拿得起，也要放得下。拿得起是生存，放得下是生活；拿得起是能力，放得下是智慧。有的人拿不起，也就无所谓放下；有的人拿得起，却放不下。拿不起，就会庸庸碌碌；放不下，就会疲惫不堪。人生有许多东西需要放下。 
+</p>
+<input  type="button" value="改变格式" onclick="bian()"/>
+</body>
+<script>
+	function bian()
+	{
+		// 改变外部样式其实就是改变link标签的href属性
+		document.getElementById('mylink').href='abc.css'
+		// 改变外部样式主要用于网页的风格调整。
+	}
+</script>
+
+
+
+
+
+
+</html>

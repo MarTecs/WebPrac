@@ -1,0 +1,61 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>我的计算器</title>
+<meta name="" content="" charset="utf-8">
+</head>
+<body>
+<table border="1">
+	<tr>
+		<td><img src='shop.gif'></td>
+		<td colspan="4"><H1>我的购物计算器</H1></td>
+	</tr>
+	<tr>
+		<td>第一个数</td>
+		<td  colspan="4"><input type='text' id="num1"></td>
+	</tr>
+	<tr>
+		<td>第二个数</td>
+		<td  colspan="4"><input type='text' id="num2"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value='+' onclick="add()"/></td>
+		<td><input type="button" value='-'/></td>
+		<td><input type="button" value='×'/></td>
+		<td><input type="button" value='÷'/></td>
+	</tr>
+	<tr>
+		<td>结果</td>
+		<td colspan="4"><input type='text' id="result"></td>
+	</tr>
+</table>
+<script>
+function add()
+{
+var x=document.getElementById('num1');
+var y = document.getElementById('num2')
+//var z=1*x.value+1*y.value;
+//var z = parseFloat(x.value)+parseFloat(y.value)
+
+// 表单验证
+if(isNaN(x.value))	//a3ad
+{
+	alert('亲，你输入的数字有误，请重新输入')
+	x.select();	// 选中文本框的内容
+	return;
+}if(isNaN(y.value))	//a3ad
+{
+	alert('亲，你输入的数字有误，请重新输入')
+	y.select();	// 选中文本框的内容
+	return;
+}
+var z=1*x.value+1*y.value;
+
+document.getElementById('result').value=z;
+}
+
+
+</script>
+
+</body>
+</html>

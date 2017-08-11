@@ -1,0 +1,26 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>prototype属性的使用</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script>	
+	var s  = 'abcdefg';
+	// 框架中使用得多
+	// 利用prototype属性可以扩充对象的方法和属性
+	String.prototype.say=function (){
+		// 在源代码中添加了其他函数,相当于在类中添加了函数
+		alert('yes')
+	}
+	String.prototype.say=function (x){
+		// 在源代码中添加了其他函数,相当于在类中添加了函数
+		alert('no'+x)
+	}
+	var y = "aaa";
+	y.say();	
+	s.say(2);
+	
+</script>
+</body>
+</html>

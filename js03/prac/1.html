@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>跑马灯</title>
+</head>
+<body>
+  <h1 id="show">青出于蓝而青于蓝，冰水为之而寒于水！</h1>
+</body>
+<script>
+  var i = 0;
+  var string = "青出于蓝而青于蓝，冰水为之而寒于水！";
+  function go(){
+    var str = string.substring(0,i+1)
+    document.getElementById("show").innerHTML=str;
+    i++;
+    if(i == string.length )
+    {
+      i = 0;
+      go();
+    }
+  }
+  window.setInterval("go()", 200);
+</script>
+</html>

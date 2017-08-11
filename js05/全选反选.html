@@ -1,0 +1,38 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>全选/反选</title>
+<meta name="" content="" charset="utf-8">
+</head>
+<body>
+<input type="checkbox" id="quanxuan" onclick="quanxuan()">全选
+<input type="checkbox" id="fanxuan" onclick="fanxuan()">反选
+<br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<input type="checkbox" name="box"><br />
+<script>
+function quanxuan()
+{
+var x  =document.getElementById('quanxuan');
+var boxs =document.getElementsByName('box')
+for(var i=0;i<boxs.length;i++)
+boxs[i].checked = x.checked;
+	
+}
+function fanxuan()
+{
+	var boxs = document.getElementsByName('box');
+	for(var i=0;i<boxs.length;i++)			boxs[i].checked=!boxs[i].checked
+	document.getElementById('quanxuan').checked=false;
+}
+	
+	
+</script>
+</body>
+</html>

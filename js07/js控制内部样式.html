@@ -1,0 +1,47 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>js控制内部样式</title>
+<meta charset="utf-8">
+</head>
+<style>
+	li{
+		list-style: none;
+		float:left;
+		width: 100px;
+		text-align: center;
+	}
+	.bg1{
+		background:url(bg1.gif)
+	}
+	.bg2{
+		background:url(bg2.gif)
+	}
+</style>
+<body>
+<ul>
+	<li class="bg1"><a href="#">战狼1</a></li>
+	<li class="bg1"><a href="#">战狼1</a></li>
+	<li class="bg1"><a href="#">战狼1</a></li>
+	<li class="bg1"><a href="#">战狼1</a></li>
+</ul>
+</body>
+<script>
+	var x  = document.getElementsByClassName('bg1');
+	for(var i=0;i<x.length;i++)
+	{
+		x[i].onmouseover=function(){
+			// 修改内部样式
+			this.className='bg2'
+		}
+		x[i].onmouseout=function(){
+			// 修改内部样式
+			this.className='bg1'
+		}
+	}	
+	
+	
+	
+</script>
+
+</html>

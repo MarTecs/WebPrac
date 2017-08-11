@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>复习window对象</title>
+</head>
+<body>
+  倒计时关闭浏览器窗口：<span id="time"></span>
+  <button onclick="show_popup()">点击创建一个pop</button>
+</body>
+<script type="text/javascript">
+  if(window.closed == false)
+  {
+    var id = window.setTimeout("closeto()", 3000);
+    window.clearTimeout(id);
+    window.print();
+  }
+  function closeto()
+  {
+    window.close();
+  }
+  function show_popup()
+  {
+    var p=window.createPopup()
+    var pbody=p.document.body
+    pbody.style.backgroundColor="lime"
+    pbody.style.border="solid black 1px"
+    pbody.innerHTML="This is a pop-up! Click outside to close."
+    p.show(150,150,200,50,document.body)
+  }
+</script>
+</html>

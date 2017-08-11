@@ -1,0 +1,22 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>乾坤大挪移</title>
+<meta charset="utf-8">
+</head>
+<body>
+<input type="text" id="name">
+<input type="button" value="打开任督二脉" onclick="dakai()" />
+<input type="button" value="大挪移" onclick="go()" />
+<a href="越光宝盒.html" target="_blank">越光宝盒.html</a>
+</body>
+<script>
+	
+	function dakai()
+	{
+		x=window.open('越光宝盒.html','_blank','width=400,height=400,left=400,top=400');// x表示返回的window对象
+		x.document.getElementById('name2').value=document.getElementById('name').value;
+	}
+	
+</script>
+</html>

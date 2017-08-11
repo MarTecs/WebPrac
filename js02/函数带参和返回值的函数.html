@@ -1,0 +1,25 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>函数带参和返回值的函数</title>
+<meta charset="utf-8">
+</head>
+<body>
+<input type="button" value="试试看" onclick="test('2')">
+<script>
+	function test(x)	// 如果函数带有参数，直接形参名即可
+	{
+		var y=test2(x);	
+		alert(y);
+	}
+	function test2(y)
+	{
+		return y*y;	// 如果函数有返回值，直接使用return 返回一个值
+	}
+	
+	
+</script>
+
+
+</body>
+</html>

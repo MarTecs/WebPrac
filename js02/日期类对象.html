@@ -1,0 +1,47 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>日期类对象</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>现在是北京时间：<span id="time"> </span></h1>
+
+
+<script>
+	function go()
+	{
+		var now = new Date();	// 声明一个日期对象
+	//document.write(now.toLocaleString())// 本地化日期格式
+		document.getElementById('time').innerHTML=now.toLocaleString();
+	}
+	go();
+	window.setInterval('go()',1000);
+	// 设置一个定时器，每隔1000毫秒调用go()函数一次
+	
+	//alert(now)
+	//document.write(now);
+	// 日期格式转换：
+	/*var year= now.getFullYear();
+	var month = now.getMonth()+1
+	var day=now.getDate();
+	var week=now.getDay();	//得到星期数
+	var hour = now.getHours()
+	var min = now.getMinutes()
+	var sec = now.getSeconds();
+	var timestring = year+"年"+month+"月"+day+"日"+hour +":"+min+":"+sec;
+	*/
+	//document.write(timestring)
+	// 自动转换日期格式：
+	
+	
+	// 1. 数组自定义排序
+	// 2. 显示当前时间到网页
+	// 3. 面试题：定义一个函数，删除数组中重复元素
+	// 4. 面试题：定义一个函数，统计数组中元素值的个数
+	[3,4,3,5,6,2,3,5,6,7]
+	
+	
+</script>
+</body>
+</html>

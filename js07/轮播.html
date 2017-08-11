@@ -1,0 +1,64 @@
+<!DOCTYPE	html>
+<html	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>轮播</title>
+<meta charset="utf-8">
+<style>
+	.cang{
+		display:none;
+	}
+	.show{
+		display:block;
+	}
+	li{
+		list-style: none;
+		float:left;
+		width:20px;
+		height: 20px;
+		border:1px solid red;
+		text-align: center;/*水平居中*/
+		line-height: 20px;
+		border-radius: 10px;/*设置圆角边框，是css3中新增的*/
+	}
+	a{
+		text-decoration: none;/*去掉下划线*/
+	}
+	#shuzi{
+		position: relative;/*相对位置*/
+		margin-top: -50px;
+		margin-left: 250px; ;
+	}
+	.aa{
+		background: white;
+	}
+	.cc{
+		background: blue;
+	}
+</style>
+</head>
+<body>
+<div>
+	<div id='tu'>
+		<img src='img/a.jpg' class="show" name='tu'>
+		<img src='img/b.jpg' class="cang" name='tu'>
+		<img src='img/c.jpg' class="cang" name='tu'>
+		<img src='img/d.jpg' class="cang" name='tu'>
+		<img src='img/e.jpg' class="cang" name='tu'>
+	</div>
+	<div id="shuzi">
+		<ul>
+			<li class="aa cc" onmouseover='showx(0)'><a href="#">1</a></li>
+			<li class="aa"  onmouseover='showx(1)'><a href="#">2</a></li>
+			<li class="aa"  onmouseover='showx(2)'><a href="#">3</a></li>
+			<li class="aa"  onmouseover='showx(3)'><a href="#">4</a></li>
+			<li class="aa" onmouseover='showx(4)'><a href="#">5</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+<script src="myjs.js">
+
+</script>
+
+
+</html>
